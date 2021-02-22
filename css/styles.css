@@ -54,12 +54,12 @@ h1 {
   height: 550px;
   background-color: #181b1d;
   color: white;
-  border: solid 2px yellow;
+  border: solid 2px white;
   border-radius: 10px;
   margin: 10px;
   position: relative;
   text-align: center;
-  box-shadow: 2px 2px 4px yellow;
+  box-shadow: 2px 2px 4px white;
 }
 .card img {
   width: 100%;
