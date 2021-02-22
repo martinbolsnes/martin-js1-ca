@@ -2,7 +2,7 @@ const pokemonUrl = '';
 
 async function getPokemon() {
   try {
-    const repsonse = await fetch('https://api.pokemontcg.io/v2/cards');
+    const repsonse = await fetch('https://api.pokemontcg.io/v2/cards/');
     const jsonFromServer = await repsonse.json();
     console.log(jsonFromServer.data);
     const pokemonResults = jsonFromServer.data;
@@ -12,9 +12,9 @@ async function getPokemon() {
     pokemonResults.forEach(function (value) {
       document.querySelector('main').innerHTML += `
         <div class="card">
-            <h3>${value.name}</h3>
-            <p>HP: ${value.hp}</p>
-            <p>${value.rarity}</p>
+        <img src="${value.images.small}">
+            <h2>${value.name}</h2>
+            <a class="btnElm" href="details.html?id=${value.id}">Read More</a>
     </div>`;
     });
   } catch (error) {
